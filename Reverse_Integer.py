@@ -1,0 +1,13 @@
+n=int(input())
+s=0
+t=n
+if(n<0):
+    n=abs(n)
+while(n>0):
+    d=int(n%10)
+    s=s*10+d
+    n=n//10
+if(t<0):
+    print(-s)
+else:
+    print(s)
