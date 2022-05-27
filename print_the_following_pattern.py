@@ -1,5 +1,8 @@
 n=int(input())
-for i in range(0,n):
-    for j in range(0,n-i):
-        print(chr(65+n-1-i),end=' ')
+for i in range(n):
+    for j in range(n):
+        if(j==0 or i==n-1 or i==j):
+            print("*",end='')
+        else:
+            print(" ",end='')
     print()
