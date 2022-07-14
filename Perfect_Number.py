@@ -1,9 +1,12 @@
 n=int(input())
-s=0
-for i in range(1,n):
-    if n%i==0:
+import math
+s=1
+for i in range(2,int(math.sqrt(n))+1):
+    if(n%i==0):
         s+=i
-    i+=1
+        s+=n//i
+        if(i==n//i):
+            s-=i
 if(s==n):
     print("True")
 else:
