@@ -1,27 +1,30 @@
-x=int(input())
-for k in range(0,x):
+def pri(n):
+    if(n==1):
+        return 0
+    if(n==2):
+        return 1
+    for i in range(2,int(math.sqrt(n))+1):
+        if(n%i==0):
+            return 0
+    return 1
+import math
+t=int(input())
+while(t):
     n=int(input())
-    t=n
-    c=0
-    s=0
-    while(n!=0):
-        c+=1
-        for i in range(2,int(n**0.5)+1):
-            if(n%i==0):
-                break
-        else:
+    p=n
+    s=n
+    while(n):
+        if(pri(n)):
+            x=n
             break
-        n-=1
-    while(t!=0):
-        s+=1
-        for i in range(2,int(t**0.5)+1):
-            if(t%i==0):
-                break
-        else:
+        n+=1
+    while(s):
+        if(pri(s)):
+            y=s
             break
-        t+=1
-    if(s<c):
-        print(t)
+        s-=1
+    if(x-p>=p-y):
+        print(y)
     else:
-        print(n)
-    
+        print(x)
+    t-=1
