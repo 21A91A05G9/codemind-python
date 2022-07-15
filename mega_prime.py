@@ -23,4 +23,3 @@ if(prime(n)):
         print("Not Mega Prime")
 else:
     print("Not Mega Prime")
-    
