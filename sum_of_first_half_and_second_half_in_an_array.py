@@ -1,0 +1,12 @@
+n=int(input())
+l=list(map(int,input().split()))[:n]
+if(len(l)%2==0):
+    k=l[:n//2]
+    j=l[n//2:]
+    print(sum(k))
+    print(sum(j))
+else:
+    k=l[:(n//2)]
+    j=l[n//2:]
+    print(sum(k))
+    print(sum(j))
